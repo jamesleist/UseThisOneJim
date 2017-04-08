@@ -2,6 +2,7 @@ package com.example.listview;
 
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -92,6 +93,9 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
                 if (statusCode / 100 != 2) {
                     Log.e(TAG, "Error-connection.getResponseCode returned "
                             + Integer.toString(statusCode));
+
+                    Toast toast = Toast.makeText(myActivity, "Could not recieve JSON Data", Toast.LENGTH_LONG);
+                    toast.show();
                     return null;
                 }
 
