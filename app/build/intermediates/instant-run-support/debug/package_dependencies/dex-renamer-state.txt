@@ -1,0 +1,13 @@
+#Fri Apr 07 20:58:32 EDT 2017
+renamed.3=classes3.dex
+renamed.2=classes4.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.3=C\:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-23.1.1_85bb16bac1c3313559584ebbde1f9cdfe80bbeaf
+base.2=C\:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-23.1.1_1f4ecffe5b6d88113935c73a51ba8d08849be965
+base.1=C\:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_23d92f7c44f268f70b26cf8cc9487b8f25a7dee9
+base.0=C\:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_163eb3e03328b195828c03bf0308ac9bafaabf3c
+file.3=C\:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-23.1.1_85bb16bac1c3313559584ebbde1f9cdfe80bbeaf\\classes.dex
+file.2=C\:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-23.1.1_1f4ecffe5b6d88113935c73a51ba8d08849be965\\classes.dex
+file.1=C\:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_23d92f7c44f268f70b26cf8cc9487b8f25a7dee9\\classes.dex
+file.0=C\:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_163eb3e03328b195828c03bf0308ac9bafaabf3c\\classes.dex

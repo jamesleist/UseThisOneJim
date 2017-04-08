@@ -6,4 +6,9 @@
         <item>Price</item>
         <item>Location</item>
    </string-array>
+
+    <string-array name="websites">
+        <item>Teton Software - Bikes</item>
+        <item>CNU-Defender</item>
+    </string-array>
 </resources>

@@ -26,6 +26,8 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
     String myURL;
     int statusCode = 0;
 
+    private String jsonData;
+
     DownloadTask(Activity_ListView activity) {
         attach(activity);
     }
@@ -117,7 +119,10 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        //TODO Your Stuff Here
+        if(myActivity != null){
+            myActivity.bindData(result);
+            jsonData = result;
+        }
     }
 
     /*

@@ -1,17 +1,24 @@
 package com.example.listview;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class Activity_ListView extends AppCompatActivity {
 
-
-	ListView my_listview;
+	private SharedPreferences myPreference;
+	private SharedPreferences.OnSharedPreferenceChangeListener listener;
+	private ListView my_listview;
+	private ConnectivityCheck connect;
+	private DownloadTask downloadJSON;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +31,38 @@ public class Activity_ListView extends AppCompatActivity {
 		//listview that you will operate on
 		my_listview = (ListView)findViewById(R.id.lv);
 
+		myPreference = PreferenceManager.getDefaultSharedPreferences(this);
+
+		//On Update prefrences
+		listener = new SharedPreferences.OnSharedPreferenceChangeListener(){
+			public void onSharedPreferenceChanged(SharedPreferences prefs, String key){
+				if(key.equals("listpref")){
+
+
+				}
+			}
+		};
+		//updates when prefrences change
+		myPreference.registerOnSharedPreferenceChangeListener(listener);
+
 		//toolbar
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 
 		setupSimpleSpinner();
+
+		if(connect.isNetworkReachableAlertUserIfNot(this)) {
+			Toast toast = Toast.makeText(this, "Break reached", Toast.LENGTH_LONG);
+            toast.show();
+			if(downloadJSON != null) {
+				downloadJSON.detach();
+				downloadJSON = null;
+			}
+
+			downloadJSON = new DownloadTask(this);
+			downloadJSON.execute(myPreference.getString("listpref","http://www.tetonsoftware.com/bikes/bikes.json"));
+		}
 
 		//set the listview onclick listener
 		setupListViewOnClickListener();
@@ -49,7 +82,7 @@ public class Activity_ListView extends AppCompatActivity {
 	 *
 	 * @param JSONString  complete string of all bikes
 	 */
-	private void bindData(String JSONString) {
+	public void bindData(String JSONString) {
 
 	}
 
@@ -74,7 +107,9 @@ public class Activity_ListView extends AppCompatActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-
+			case R.id.action_settings:
+				Intent myIntent = new Intent(this, activityPreference.class);
+				startActivity(myIntent);
 		default:
 			break;
 		}
