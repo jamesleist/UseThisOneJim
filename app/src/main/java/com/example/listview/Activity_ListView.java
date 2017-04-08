@@ -19,6 +19,7 @@ public class Activity_ListView extends AppCompatActivity {
 	private ListView my_listview;
 	private ConnectivityCheck connect;
 	private DownloadTask downloadJSON;
+    protected String dataJSON;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

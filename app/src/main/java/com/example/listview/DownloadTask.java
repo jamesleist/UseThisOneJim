@@ -120,7 +120,7 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         if(myActivity != null){
-            myActivity.bindData(result);
+            myActivity.dataJSON = result;
             jsonData = result;
         }
     }
