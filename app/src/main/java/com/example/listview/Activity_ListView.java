@@ -12,6 +12,8 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class Activity_ListView extends AppCompatActivity {
 
 	private SharedPreferences myPreference;
@@ -19,6 +21,8 @@ public class Activity_ListView extends AppCompatActivity {
 	private ListView my_listview;
 	private ConnectivityCheck connect;
 	private DownloadTask downloadJSON;
+    protected String dataJSON;
+    private ArrayList<BikeData> bikes;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -66,9 +70,6 @@ public class Activity_ListView extends AppCompatActivity {
 
 		//set the listview onclick listener
 		setupListViewOnClickListener();
-
-		//TODO call a thread to get the JSON list of bikes
-		//TODO when it returns it should process this data with bindData
 	}
 
 	private void setupListViewOnClickListener() {
@@ -115,4 +116,11 @@ public class Activity_ListView extends AppCompatActivity {
 		}
 		return true;
 	}
+
+	public void refresh() {
+        bikes.clear();
+        spinner.setSelection(0);
+        downloadJSON = new DownloadTask(this);
+        downloadJSON.execute(myPreference.getString("listpref","http://www.tetonsoftware.com/bikes/bikes.json"));
+    }
 }
