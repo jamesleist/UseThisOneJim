@@ -83,7 +83,7 @@ public class Activity_ListView extends AppCompatActivity {
 	 *
 	 * @param JSONString  complete string of all bikes
 	 */
-	public void bindData(String JSONString) {
+	private void bindData(String JSONString) {
 
 	}
 
@@ -111,6 +111,11 @@ public class Activity_ListView extends AppCompatActivity {
 			case R.id.action_settings:
 				Intent myIntent = new Intent(this, activityPreference.class);
 				startActivity(myIntent);
+				return true;
+
+			case(R.id.action_refresh):
+				refresh();
+				return true;
 		default:
 			break;
 		}
