@@ -28,7 +28,7 @@ public class JSONHelper {
     private static final String PICTURE = "Picture";
     private static final String LINK = "Link";
 
-    private JSONHelper() {
+    public JSONHelper() {
     }
 
     /**
