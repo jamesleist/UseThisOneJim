@@ -10,20 +10,34 @@ public class BikeData {
     public static final int MODEL = 1;
     public static final int PRICE = 2;
     public static final int LOCATION = 3;
-
-    //TODO make all BikeData fields final
+    private String Company;
+    private String Model;
+    private Double Price;
+    private String Description;
+    private String Location;
+    private String Date;
+    private String Picture;
+    private String Link;
 
     /* (non-Javadoc)
      * @see java.lang.Object#toString()
      */
     @Override
     public String toString() {
-        // TODO figure out how to print all bikedata out for dialogs
-        return "TODO";
+
+        return "Company: \" + Company + \"\\nModel: \" + Model + \"\\nPrice: $\" + Price + \"\\nLocation: \" + Location + \"" +
+                "\\nDate Listed: \" + Date + \"\\nDescription: \" + Description + \"\\nLink: \" + Link;";
     }
 
     private BikeData(Builder b) {
-        //TODO
+        this.Company = b.Company;
+        this.Model = b.Model;
+        this.Price = b.Price;
+        this.Location = b.Location;
+        this.Date = b.Date;
+        this.Description = b.Description;
+        this.Link = b.Link;
+        this.Picture = b.Picture;
     }
 
     /**
@@ -53,27 +67,27 @@ public class BikeData {
         // notice it returns this bulder
         // makes it suitable for chaining
         Builder setDescription(String Description) {
-            //TODO manage this
+            this.Description = Description;
             return this;
         }
 
         Builder setLocation(String Location) {
-
+            this.Location = Location;
             return this;
         }
 
         Builder setDate(String Date) {
-
+            this.Date = Date;
             return this;
         }
 
         Builder setPicture(String Picture) {
-
+            this.Picture = Picture;
             return this;
         }
 
         Builder setLink(String Link) {
-
+            this.Link = Link;
             return this;
         }
 
