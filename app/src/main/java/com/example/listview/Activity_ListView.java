@@ -1,9 +1,11 @@
 package com.example.listview;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -34,6 +36,8 @@ public class Activity_ListView extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		connect = new ConnectivityCheck();
+
 		// Change title to indicate sort by
 		setTitle("Sort by:");
 
@@ -46,8 +50,7 @@ public class Activity_ListView extends AppCompatActivity {
 		listener = new SharedPreferences.OnSharedPreferenceChangeListener(){
 			public void onSharedPreferenceChanged(SharedPreferences prefs, String key){
 				if(key.equals("listpref")){
-
-
+                       refresh();
 				}
 			}
 		};
@@ -59,11 +62,9 @@ public class Activity_ListView extends AppCompatActivity {
 		setSupportActionBar(toolbar);
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 
-		setupSimpleSpinner();
-
 		if(connect.isNetworkReachableAlertUserIfNot(this)) {
-			Toast toast = Toast.makeText(this, "Break reached", Toast.LENGTH_LONG);
-            toast.show();
+			//Toast toast = Toast.makeText(this, "Break reached", Toast.LENGTH_LONG);
+            //toast.show();
 			if(downloadJSON != null) {
 				downloadJSON.detach();
 				downloadJSON = null;
@@ -74,11 +75,25 @@ public class Activity_ListView extends AppCompatActivity {
 		}
 
 		//set the listview onclick listener
-		setupListViewOnClickListener();
+		//setupListViewOnClickListener();
 	}
 
 	private void setupListViewOnClickListener() {
-		//TODO you want to call my_listviews setOnItemClickListener with a new instance of android.widget.AdapterView.OnItemClickListener() {
+		my_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				AlertDialog.Builder builder = new AlertDialog.Builder(Activity_ListView.this);
+				builder.setMessage(bikes.get(position) + "");
+				builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+
+					}
+				});
+				AlertDialog dialog = builder.create();
+				dialog.show();
+			}
+		});
 	}
 
 	/**
@@ -88,7 +103,7 @@ public class Activity_ListView extends AppCompatActivity {
 	 *
 	 * @param JSONString  complete string of all bikes
 	 */
-	private void bindData(String JSONString) {
+	protected void bindData(String JSONString) {
 		JSONHelper helper = new JSONHelper();
 		bikes = helper.parseAll(JSONString);
         my_listview.setAdapter( new listViewAdapter(this, bikes));
@@ -133,6 +148,7 @@ public class Activity_ListView extends AppCompatActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu, menu);
+		setupSimpleSpinner();
 		return true;
 	}
 
@@ -154,8 +170,10 @@ public class Activity_ListView extends AppCompatActivity {
 	}
 
 	public void refresh() {
-        bikes.clear();
-        spinner.setSelection(0);
+        if(bikes != null) {
+			bikes.clear();
+		}
+        //spinner.setSelection(0);
         downloadJSON = new DownloadTask(this);
         downloadJSON.execute(myPreference.getString("listpref","http://www.tetonsoftware.com/bikes/bikes.json"));
     }

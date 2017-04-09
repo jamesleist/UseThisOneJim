@@ -1,4 +1,4 @@
-#Sat Apr 08 15:56:07 EDT 2017
+#Sat Apr 08 21:52:26 EDT 2017
 base.0=C\:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_964451c66b6d099cb8c57db988eea896058a546d
 renamed.1=classes2.dex
 renamed.0=classes.dex

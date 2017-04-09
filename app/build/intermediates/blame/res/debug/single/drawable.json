@@ -8,12 +8,12 @@
         "source": "C:\\Users\\gordon\\.android\\build-cache\\b83cb426bb0613faef5b5b793b6502750a9fd34b\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "C:\\Users\\gordon\\.android\\build-cache\\b83cb426bb0613faef5b5b793b6502750a9fd34b\\output\\res\\drawable\\abc_item_background_holo_light.xml"
-    },
-    {
         "merged": "C:\\Users\\james\\AndroidStudioProjects\\UseThisOneJim\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
         "source": "C:\\Users\\james\\.android\\build-cache\\e26e083a9a030d0043f3a2440904464c3d1ccb96\\output\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\gordon\\.android\\build-cache\\b83cb426bb0613faef5b5b793b6502750a9fd34b\\output\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\james\\AndroidStudioProjects\\UseThisOneJim\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",

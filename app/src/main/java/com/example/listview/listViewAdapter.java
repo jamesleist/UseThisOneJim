@@ -35,6 +35,7 @@ public class listViewAdapter extends ArrayAdapter<BikeData> {
 
         LayoutInflater inflater = LayoutInflater.from(context);
 
+
         if(convertView == null){
 
             viewHolder = new ViewHolder();
