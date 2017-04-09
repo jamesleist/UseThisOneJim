@@ -1,31 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
-        "source": "C:\\Users\\gordon\\.android\\build-cache\\b83cb426bb0613faef5b5b793b6502750a9fd34b\\output\\res\\color\\abc_primary_text_disable_only_material_light.xml"
-    },
-    {
         "merged": "C:\\Users\\james\\AndroidStudioProjects\\UseThisOneJim\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
         "source": "C:\\Users\\james\\.android\\build-cache\\e26e083a9a030d0043f3a2440904464c3d1ccb96\\output\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
-        "source": "C:\\Users\\gordon\\.android\\build-cache\\b83cb426bb0613faef5b5b793b6502750a9fd34b\\output\\res\\color\\abc_primary_text_material_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
-        "source": "C:\\Users\\gordon\\.android\\build-cache\\b83cb426bb0613faef5b5b793b6502750a9fd34b\\output\\res\\color\\abc_secondary_text_material_light.xml"
-    },
-    {
         "merged": "C:\\Users\\james\\AndroidStudioProjects\\UseThisOneJim\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
         "source": "C:\\Users\\james\\.android\\build-cache\\e26e083a9a030d0043f3a2440904464c3d1ccb96\\output\\res\\color\\switch_thumb_material_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
-        "source": "C:\\Users\\gordon\\.android\\build-cache\\b83cb426bb0613faef5b5b793b6502750a9fd34b\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
-        "source": "C:\\Users\\gordon\\.android\\build-cache\\b83cb426bb0613faef5b5b793b6502750a9fd34b\\output\\res\\color\\abc_search_url_text.xml"
     },
     {
         "merged": "C:\\Users\\james\\AndroidStudioProjects\\UseThisOneJim\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
@@ -44,28 +24,12 @@
         "source": "C:\\Users\\james\\.android\\build-cache\\e26e083a9a030d0043f3a2440904464c3d1ccb96\\output\\res\\color\\switch_thumb_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
-        "source": "C:\\Users\\gordon\\.android\\build-cache\\b83cb426bb0613faef5b5b793b6502750a9fd34b\\output\\res\\color\\abc_primary_text_material_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
-        "source": "C:\\Users\\gordon\\.android\\build-cache\\b83cb426bb0613faef5b5b793b6502750a9fd34b\\output\\res\\color\\switch_thumb_material_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\james\\AndroidStudioProjects\\UseThisOneJim\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
         "source": "C:\\Users\\james\\.android\\build-cache\\e26e083a9a030d0043f3a2440904464c3d1ccb96\\output\\res\\color\\abc_primary_text_disable_only_material_light.xml"
     },
     {
         "merged": "C:\\Users\\james\\AndroidStudioProjects\\UseThisOneJim\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
         "source": "C:\\Users\\james\\.android\\build-cache\\e26e083a9a030d0043f3a2440904464c3d1ccb96\\output\\res\\color\\abc_secondary_text_material_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
-        "source": "C:\\Users\\gordon\\.android\\build-cache\\b83cb426bb0613faef5b5b793b6502750a9fd34b\\output\\res\\color\\abc_secondary_text_material_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
-        "source": "C:\\Users\\gordon\\.android\\build-cache\\b83cb426bb0613faef5b5b793b6502750a9fd34b\\output\\res\\color\\switch_thumb_material_light.xml"
     },
     {
         "merged": "C:\\Users\\james\\AndroidStudioProjects\\UseThisOneJim\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",

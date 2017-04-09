@@ -26,6 +26,7 @@ public class Activity_ListView extends AppCompatActivity {
 	private SharedPreferences myPreference;
 	private SharedPreferences.OnSharedPreferenceChangeListener listener;
 	private ListView my_listview;
+	private listViewAdapter adapter;
 	private ConnectivityCheck connect;
 	private DownloadTask downloadJSON;
     protected String dataJSON;
@@ -105,7 +106,8 @@ public class Activity_ListView extends AppCompatActivity {
 	protected void bindData(String JSONString) {
 		JSONHelper helper = new JSONHelper();
 		bikes = helper.parseAll(JSONString);
-        my_listview.setAdapter( new listViewAdapter(this, bikes));
+		adapter = new listViewAdapter(this, bikes);
+        my_listview.setAdapter( adapter );
 	}
 
 	Spinner spinner;
@@ -135,6 +137,7 @@ public class Activity_ListView extends AppCompatActivity {
                         Collections.sort(bikes, new ComparatorPrice());
                         break;
                 }
+				adapter.notifyDataSetChanged();
             }
 
             @Override

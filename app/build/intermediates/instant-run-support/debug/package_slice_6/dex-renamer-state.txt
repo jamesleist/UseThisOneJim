@@ -1,4 +1,0 @@
-#Fri Apr 07 20:58:34 EDT 2017
-base.0=C\:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_6
-renamed.0=classes.dex
-file.0=C\:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_6\\classes.dex
