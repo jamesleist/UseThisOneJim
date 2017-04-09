@@ -125,7 +125,7 @@ public class DownloadTask extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String result) {
         if(myActivity != null){
             myActivity.dataJSON = result;
-            jsonData = result;
+            myActivity.bindData(result);
         }
     }
 

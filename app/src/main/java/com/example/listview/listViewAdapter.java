@@ -35,6 +35,7 @@ public class listViewAdapter extends ArrayAdapter<BikeData> {
 
         LayoutInflater inflater = LayoutInflater.from(context);
 
+
         if(convertView == null){
 
             viewHolder = new ViewHolder();
@@ -54,13 +55,13 @@ public class listViewAdapter extends ArrayAdapter<BikeData> {
         BikeData current = bikeList.get(position);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView1);
         DownloadImageTask dlImage = new DownloadImageTask("http://www.tetonsoftware.com/bikes", imageView);
-       // dlImage.execute("http://www.tetonsoftware.com/bikes/" + current.picture);
+        dlImage.execute("http://www.tetonsoftware.com/bikes/" + current.getPicture());
 
 
 
-       // viewHolder.price.setText(current.Price + "");
-       // viewHolder.model.setText(current.Model);
-       // viewHolder.description.setText(current.Description);
+        viewHolder.price.setText(current.getPrice() + "");
+        viewHolder.model.setText(current.getModel());
+        viewHolder.description.setText(current.getDescription());
 
         return convertView;
     }
