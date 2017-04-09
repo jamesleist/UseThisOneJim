@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <ListPreference android:title="Info"
-        android:key ="websiteData"
+        android:key ="listPerf"
         android:summary="Select which connection to receives bikes from"
         android:defaultValue="@string/tetonURL"
         android:entries="@array/websites"
