@@ -41,8 +41,7 @@ public class Activity_ListView extends AppCompatActivity {
 		listener = new SharedPreferences.OnSharedPreferenceChangeListener(){
 			public void onSharedPreferenceChanged(SharedPreferences prefs, String key){
 				if(key.equals("listpref")){
-
-
+                        refresh();
 				}
 			}
 		};
