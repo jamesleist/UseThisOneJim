@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\james\\AndroidStudioProjects\\UseThisOneJim\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "C:\\Users\\james\\.android\\build-cache\\e26e083a9a030d0043f3a2440904464c3d1ccb96\\output\\res\\layout\\abc_search_view.xml"
-    },
-    {
         "merged": "C:\\Users\\james\\AndroidStudioProjects\\UseThisOneJim\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
         "source": "C:\\Users\\james\\.android\\build-cache\\e26e083a9a030d0043f3a2440904464c3d1ccb96\\output\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\james\\AndroidStudioProjects\\UseThisOneJim\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\james\\.android\\build-cache\\e26e083a9a030d0043f3a2440904464c3d1ccb96\\output\\res\\layout\\abc_search_view.xml"
     },
     {
         "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
@@ -20,12 +20,12 @@
         "source": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\src\\main\\res\\layout\\spinner_item.xml"
     },
     {
-        "merged": "C:\\Users\\james\\AndroidStudioProjects\\UseThisOneJim\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "C:\\Users\\james\\.android\\build-cache\\e26e083a9a030d0043f3a2440904464c3d1ccb96\\output\\res\\layout\\abc_list_menu_item_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
         "source": "C:\\Users\\gordon\\.android\\build-cache\\b83cb426bb0613faef5b5b793b6502750a9fd34b\\output\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\james\\AndroidStudioProjects\\UseThisOneJim\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\james\\.android\\build-cache\\e26e083a9a030d0043f3a2440904464c3d1ccb96\\output\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
         "merged": "C:\\Users\\gordon\\Desktop\\P5_CraigsList_Skeleton\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",

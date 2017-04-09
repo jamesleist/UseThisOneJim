@@ -10,14 +10,12 @@ public class BikeData {
     private final double Price;
     //TODO make all BikeData fields final
 
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-
     @Override
     public String toString() {
-        // TODO figure out how to print all bikedata out for dialogs
-        return "TODO";
-    }*/
+        return "Company: " + Company + "\nModel: " + Model + "\nPrice: $" + Price +
+                "\nLocation: " + Location + "\nDate Listed: " + Date +
+                "\nDescription: " + Description + "\nLink: " + Link;
+    }
 
     private BikeData(Builder b) {
         this.Company = b.Company;

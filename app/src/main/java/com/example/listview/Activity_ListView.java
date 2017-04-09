@@ -49,7 +49,7 @@ public class Activity_ListView extends AppCompatActivity {
 		//On Update prefrences
 		listener = new SharedPreferences.OnSharedPreferenceChangeListener(){
 			public void onSharedPreferenceChanged(SharedPreferences prefs, String key){
-				if(key.equals("listpref")){
+				if(key.equals("websiteData")){
                        refresh();
 				}
 			}
@@ -70,12 +70,11 @@ public class Activity_ListView extends AppCompatActivity {
 				downloadJSON = null;
 			}
 
-			downloadJSON = new DownloadTask(this);
-			downloadJSON.execute(myPreference.getString("listpref","http://www.tetonsoftware.com/bikes/bikes.json"));
+			runDownload();
 		}
 
 		//set the listview onclick listener
-		//setupListViewOnClickListener();
+		setupListViewOnClickListener();
 	}
 
 	private void setupListViewOnClickListener() {
@@ -83,7 +82,7 @@ public class Activity_ListView extends AppCompatActivity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				AlertDialog.Builder builder = new AlertDialog.Builder(Activity_ListView.this);
-				builder.setMessage(bikes.get(position) + "");
+				builder.setMessage(bikes.get(position).toString() + "");
 				builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
@@ -144,6 +143,12 @@ public class Activity_ListView extends AppCompatActivity {
             }
         });
 	}
+
+	private void runDownload() {
+		downloadJSON = new DownloadTask(this);
+		downloadJSON.execute(myPreference.getString("listPref","http://www.tetonsoftware.com/bikes/bikes.json"));
+	}
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -173,9 +178,8 @@ public class Activity_ListView extends AppCompatActivity {
         if(bikes != null) {
 			bikes.clear();
 		}
-        //spinner.setSelection(0);
-        downloadJSON = new DownloadTask(this);
-        downloadJSON.execute(myPreference.getString("listpref","http://www.tetonsoftware.com/bikes/bikes.json"));
+        spinner.setSelection(0);
+        runDownload();
     }
 }
 
