@@ -6,38 +6,60 @@ package com.example.listview;
  * with many optional fields
  */
 public class BikeData {
-    public static final int COMPANY = 0;
-    public static final int MODEL = 1;
-    public static final int PRICE = 2;
-    public static final int LOCATION = 3;
-    private String Company;
-    private String Model;
-    private Double Price;
-    private String Description;
-    private String Location;
-    private String Date;
-    private String Picture;
-    private String Link;
+    private final String Company, Model, Description, Location, Date, Picture, Link;
+    private final double Price;
+    //TODO make all BikeData fields final
 
     /* (non-Javadoc)
      * @see java.lang.Object#toString()
-     */
+
     @Override
     public String toString() {
-
-        return "Company: \" + Company + \"\\nModel: \" + Model + \"\\nPrice: $\" + Price + \"\\nLocation: \" + Location + \"" +
-                "\\nDate Listed: \" + Date + \"\\nDescription: \" + Description + \"\\nLink: \" + Link;";
-    }
+        // TODO figure out how to print all bikedata out for dialogs
+        return "TODO";
+    }*/
 
     private BikeData(Builder b) {
         this.Company = b.Company;
         this.Model = b.Model;
         this.Price = b.Price;
+        this.Description = b.Description;
         this.Location = b.Location;
         this.Date = b.Date;
-        this.Description = b.Description;
-        this.Link = b.Link;
         this.Picture = b.Picture;
+        this.Link = b.Link;
+    }
+
+    public String getCompany() {
+        return Company;
+    }
+
+    public String getModel() {
+        return Model;
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public String getLocation() {
+        return Location;
+    }
+
+    public String getDate() {
+        return Date;
+    }
+
+    public String getPicture() {
+        return Picture;
+    }
+
+    public String getLink() {
+        return Link;
+    }
+
+    public double getPrice() {
+        return Price;
     }
 
     /**

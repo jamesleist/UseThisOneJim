@@ -8,11 +8,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class Activity_ListView extends AppCompatActivity {
 
@@ -22,7 +27,7 @@ public class Activity_ListView extends AppCompatActivity {
 	private ConnectivityCheck connect;
 	private DownloadTask downloadJSON;
     protected String dataJSON;
-    private ArrayList<BikeData> bikes;
+    private List<BikeData> bikes;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +89,9 @@ public class Activity_ListView extends AppCompatActivity {
 	 * @param JSONString  complete string of all bikes
 	 */
 	private void bindData(String JSONString) {
-
+		JSONHelper helper = new JSONHelper();
+		bikes = helper.parseAll(JSONString);
+        my_listview.setAdapter( new listViewAdapter(this, bikes));
 	}
 
 	Spinner spinner;
@@ -96,7 +103,31 @@ public class Activity_ListView extends AppCompatActivity {
 	 * dontforget to bind the listener to the spinner with setOnItemSelectedListener!
 	 */
 	private void setupSimpleSpinner() {
+        spinner = (Spinner) findViewById(R.id.spinner);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                switch(adapterView.getItemAtPosition(i).toString()) {
+                    case "Company":
+                        Collections.sort(bikes, new ComparatorCompany());
+                        break;
+                    case "Model":
+                        Collections.sort(bikes, new ComparatorModel());
+                        break;
+                    case "Location":
+                        Collections.sort(bikes, new ComparatorLocation());
+                        break;
+                    case "Price":
+                        Collections.sort(bikes, new ComparatorPrice());
+                        break;
+                }
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -128,4 +159,52 @@ public class Activity_ListView extends AppCompatActivity {
         downloadJSON = new DownloadTask(this);
         downloadJSON.execute(myPreference.getString("listpref","http://www.tetonsoftware.com/bikes/bikes.json"));
     }
+}
+
+class ComparatorModel implements Comparator<BikeData> {
+
+    public int compare(BikeData myData1, BikeData myData2) {
+
+// if both equal then 0
+
+        return (myData1.getModel().compareTo(myData2.getModel()));
+
+    }
+
+}
+
+class ComparatorCompany implements Comparator<BikeData> {
+
+    public int compare(BikeData myData1, BikeData myData2) {
+
+// if both equal then 0
+
+        return (myData1.getCompany().compareTo(myData2.getCompany()));
+
+    }
+
+}
+
+class ComparatorLocation implements Comparator<BikeData> {
+
+    public int compare(BikeData myData1, BikeData myData2) {
+
+// if both equal then 0
+
+        return (myData1.getLocation().compareTo(myData2.getLocation()));
+
+    }
+
+}
+
+class ComparatorPrice implements Comparator<BikeData> {
+
+    public int compare(BikeData myData1, BikeData myData2) {
+
+// if both equal then 0
+
+        return ((int)(myData1.getPrice()*100))-((int)(myData2.getPrice()*100));
+
+    }
+
 }
